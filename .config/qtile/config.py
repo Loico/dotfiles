@@ -468,7 +468,7 @@ screens = [
             top_bar(),
             size=22,
             background=colors[0],
-            margin=[0, 0, 5, 0],
+            margin=[0, 0, 0, 0],
             opacity=0.95
         ),
         wallpaper="/usr/share/backgrounds/ubuntu-gnome/ubuntu-gnome-ayllon.jpg",
