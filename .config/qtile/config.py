@@ -28,7 +28,7 @@ import os
 import subprocess
 from typing import List  # noqa: F401
 
-from libqtile import bar, layout, widget, hook
+from libqtile import qtile, bar, layout, widget, hook
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 
@@ -267,6 +267,7 @@ def top_bar():
             padding=0,
             background=colors[11],
             foreground=colors[2],
+            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("kitty -e htop")},
         ),
         widget.DF(
             font="Iosevka Nerd Font",
@@ -277,7 +278,7 @@ def top_bar():
             background=colors[11],
             foreground=colors[2],
             padding=5,
-            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("kitty -e bashtop")},
+            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("kitty -e htop")},
         ),
         widget.TextBox(
             text=powerline_symbol,
@@ -294,7 +295,7 @@ def top_bar():
             foreground=colors[2],
             background=colors[12],
             padding=0,
-            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("kitty -e bashtop")},
+            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("kitty -e htop")},
         ),
         widget.Memory(
             background=colors[12],
@@ -302,7 +303,7 @@ def top_bar():
             font="Iosevka Nerd Font",
             fontsize=15,
             format="{MemUsed: .0f} MB",
-            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("kitty -e top")},
+            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("kitty -e htop")},
         ),
         widget.Sep(
             padding=8,
@@ -348,7 +349,7 @@ def top_bar():
             foreground=colors[0],
             font="Iosevka Nerd Font",
             fontsize=15,
-        #    mouse_callbacks={"Button3": lambda: qtile.cmd_spawn("kitty -e pulsemixer")},
+            mouse_callbacks={"Button3": lambda: qtile.cmd_spawn("kitty -e pulsemixer")},
         ),
         # Doesn't work with Spotify so its disabled!
         # widget.TextBox(
