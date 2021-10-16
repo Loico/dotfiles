@@ -210,7 +210,8 @@ def top_bar():
             highlight_color=colors[3],
             highlight_method="block",
             this_current_screen_border=colors[6],
-            block_highlight_text_color=colors[0],
+            block_highlight_text_color=colors[8],
+            disable_drag=True,
         ),
         widget.TextBox(
             text=powerline_symbol,
@@ -243,14 +244,13 @@ def top_bar():
             background=colors[0],
             foreground=colors[10],
         ),
-        widget.CurrentLayoutIcon(
-            custom_icon_paths=[os.path.expanduser("~/.config/qtile/icons")],
-            scale=0.45,
-            padding=0,
+        widget.Net(
+            font="Iosevka Nerd Font",
+            fontsize=15,
+            format = '{down} ↓↑ {up}',
             background=colors[10],
             foreground=colors[2],
-            font="Iosevka Nerd Font",
-            fontsize=14,
+            padding=5,
         ),
         widget.TextBox(
             text=powerline_symbol,
@@ -391,7 +391,7 @@ def top_bar():
         widget.KeyboardLayout(
             font="Iosevka Nerd Font",
             configured_keyboards=["us", "ch"],
-            fontsize="14",
+            fontsize=15,
             padding=0,
             background=colors[14],
             foreground=colors[0],
@@ -471,11 +471,11 @@ screens = [
             margin=[0, 0, 0, 0],
             opacity=0.95
         ),
-        wallpaper="/usr/share/backgrounds/ubuntu-gnome/ubuntu-gnome-ayllon.jpg",
+        wallpaper="~/Pictures/wallpaper.jpg",
         wallpaper_mode="fill",
     ),
     Screen(
-        wallpaper="/usr/share/backgrounds/ubuntu-gnome/ubuntu-gnome-ayllon.jpg",
+        wallpaper="~/Pictures/wallpaper.jpg",
         wallpaper_mode="fill",
     ),
 ]
