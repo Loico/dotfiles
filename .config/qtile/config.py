@@ -267,7 +267,7 @@ def top_bar():
             padding=0,
             background=colors[11],
             foreground=colors[2],
-            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("kitty -e htop")},
+            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("nautilus")},
         ),
         widget.DF(
             font="Iosevka Nerd Font",
@@ -278,7 +278,7 @@ def top_bar():
             background=colors[11],
             foreground=colors[2],
             padding=5,
-            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("kitty -e htop")},
+            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("nautilus")},
         ),
         widget.TextBox(
             text=powerline_symbol,
