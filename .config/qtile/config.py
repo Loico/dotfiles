@@ -349,7 +349,7 @@ def top_bar():
             foreground=colors[0],
             font="Iosevka Nerd Font",
             fontsize=15,
-            mouse_callbacks={"Button3": lambda: qtile.cmd_spawn("kitty -e pulsemixer")},
+            mouse_callbacks={"Button3": lambda: qtile.cmd_spawn("pavucontrol")},
         ),
         # Doesn't work with Spotify so its disabled!
         # widget.TextBox(
