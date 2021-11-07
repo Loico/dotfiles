@@ -323,6 +323,14 @@ def top_bar():
             linewidth=0,
             background=colors[7],
         ),
+        widget.KeyboardLayout(
+            font="Iosevka Nerd Font",
+            configured_keyboards=["us", "ch"],
+            fontsize=15,
+            padding=0,
+            background=colors[7],
+            foreground=colors[2],
+        ),
         widget.Systray(
             background=colors[7],
             foreground=colors[2],
@@ -389,11 +397,12 @@ def top_bar():
             background=colors[13],
             foreground=colors[14],
         ),
-        widget.KeyboardLayout(
+        widget.Battery(
             font="Iosevka Nerd Font",
-            configured_keyboards=["us", "ch"],
-            fontsize=15,
-            padding=0,
+            charge_char="",
+            discharge_char="",
+            empty_char="",
+            format="{char} {percent:2.0%}",
             background=colors[14],
             foreground=colors[0],
         ),
