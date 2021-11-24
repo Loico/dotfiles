@@ -428,6 +428,7 @@ def top_bar():
             background=colors[15],
             fontsize=15,
             format="%d %b, %A",
+            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("kitty -e calcurse")},
         ),
         widget.Sep(
             padding=6,
