@@ -33,7 +33,7 @@ from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 
 mod = "mod4"
-terminal = "kitty"
+terminal = "alacritty"
 
 #==== Colors ====#
 
@@ -295,7 +295,7 @@ def top_bar():
             foreground=colors[2],
             background=colors[12],
             padding=0,
-            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("kitty -e htop")},
+            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("alacritty -e htop")},
         ),
         widget.Memory(
             background=colors[12],
@@ -303,7 +303,7 @@ def top_bar():
             font="Iosevka Nerd Font",
             fontsize=15,
             format="{MemUsed: .0f} MB",
-            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("kitty -e htop")},
+            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("alacritty -e htop")},
         ),
         widget.Sep(
             padding=8,
@@ -428,7 +428,7 @@ def top_bar():
             background=colors[15],
             fontsize=15,
             format="%d %b, %A",
-            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("kitty -e calcurse")},
+            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("alacritty -e calcurse")},
         ),
         widget.Sep(
             padding=6,
