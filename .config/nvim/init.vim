@@ -48,3 +48,6 @@ set background=dark
 let g:everforest_background = 'hard'
 colorscheme everforest
 
+" Set transparent background
+hi Normal ctermbg=NONE guibg=NONE
+hi EndOfBuffer ctermbg=NONE guibg=NONE

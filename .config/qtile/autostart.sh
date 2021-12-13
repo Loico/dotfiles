@@ -7,4 +7,4 @@ nm-applet &
 redshift-gtk &
 
 # Compositor
-picom &
+picom -b --experimental-backends
