@@ -128,6 +128,9 @@ export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 # Alias for dotfile git bare repository
 alias config='/usr/bin/git --git-dir=/home/loico/.cfg/ --work-tree=/home/loico'
 
+# Alias for nvim
+alias v='nvim'
+
 # Alias for Godot engine
 alias godot='~/Godot/Godot_v3.2.3-stable_x11.64'
 
