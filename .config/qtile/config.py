@@ -100,7 +100,7 @@ keys = [
     Key([mod, "control"], "j", lazy.layout.grow_down(),
         desc="Grow window down"),
     Key([mod, "control"], "k", lazy.layout.grow_up(), desc="Grow window up"),
-    Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
+    Key([mod, "control"], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
 
     # Move the current column to the left or right
     Key([mod, "shift", "control"], "h", lazy.layout.swap_column_left()),
@@ -124,6 +124,8 @@ keys = [
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawn("rofi -show run"),
         desc="Launch rofi"),
+    Key([mod], "n", lazy.spawn(terminal +" -t floating_terminal -e /home/loico/bin/notetaker.sh"),
+        desc="Launch nvim to write a note"),
 ]
 
 groups = [
@@ -295,7 +297,7 @@ def top_bar():
             foreground=colors[2],
             background=colors[12],
             padding=0,
-            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("alacritty -e htop")},
+            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(terminal + " -t floating_terminal -e htop")},
         ),
         widget.Memory(
             background=colors[12],
@@ -303,7 +305,7 @@ def top_bar():
             font="Iosevka Nerd Font",
             fontsize=15,
             format="{MemUsed: .0f} MB",
-            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("alacritty -e htop")},
+            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(terminal +" -t floating_terminal -e htop")},
         ),
         widget.Sep(
             padding=8,
@@ -421,6 +423,7 @@ def top_bar():
             padding=0,
             background=colors[15],
             foreground=colors[0],
+            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(terminal + " -t floating_terminal -e calcurse")},
         ),
         widget.Clock(
             font="Iosevka Nerd Font",
@@ -428,7 +431,7 @@ def top_bar():
             background=colors[15],
             fontsize=15,
             format="%d %b, %A",
-            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("alacritty -e calcurse")},
+            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(terminal + " -t floating_terminal -e calcurse")},
         ),
         widget.Sep(
             padding=6,
@@ -515,6 +518,7 @@ floating_layout = layout.Floating(float_rules=[
     Match(title='branchdialog'),  # gitk
     Match(title='pinentry'),  # GPG key password entry
     Match(title='Qalculate!'),  # qalculate-gtk
+    Match(title='floating_terminal'),  # floating terminal launched by qtile
 ])
 auto_fullscreen = True
 focus_on_window_activation = "smart"
