@@ -126,6 +126,10 @@ keys = [
         desc="Launch rofi"),
     Key([mod], "n", lazy.spawn(terminal +" -t floating_terminal -e /home/loico/bin/notetaker.sh"),
         desc="Launch nvim to write a note"),
+
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -c 0 -q set Master 2dB+")),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -c 0 -q set Master 2dB-")),
+    Key([], "XF86AudioMute", lazy.spawn("amixer -c 0 -q set Master toggle")),
 ]
 
 groups = [
