@@ -37,8 +37,12 @@ call plug#begin('~/.config/nvim/plugged')
 
 " define your plugins
 Plug 'sainnhe/everforest'
+Plug 'neovim/nvim-lspconfig'
 
 call plug#end()
+
+" require plugin configs
+lua require('config')
 
 " --- Colors
 
