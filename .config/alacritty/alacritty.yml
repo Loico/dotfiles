@@ -160,4 +160,9 @@ colors: *everforest_dark_medium
 background_opacity: 0.95
 
 env:
-    WINIT_X11_SCALE_FACTOR: "1"
+  WINIT_X11_SCALE_FACTOR: "1"
+
+window:
+  dimensions:
+    columns: 100
+    lines: 40

@@ -301,7 +301,7 @@ def top_bar():
             foreground=colors[2],
             background=colors[12],
             padding=0,
-            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(terminal + " -t floating_terminal -e htop")},
+            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(terminal + " -t floating_terminal -e /home/loico/bin/pop-up.sh htop")},
         ),
         widget.Memory(
             background=colors[12],
@@ -309,7 +309,7 @@ def top_bar():
             font="Iosevka Nerd Font",
             fontsize=15,
             format="{MemUsed: .0f} MB",
-            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(terminal +" -t floating_terminal -e htop")},
+            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(terminal + " -t floating_terminal -e /home/loico/bin/pop-up.sh htop")},
         ),
         widget.Sep(
             padding=8,
@@ -427,7 +427,7 @@ def top_bar():
             padding=0,
             background=colors[15],
             foreground=colors[0],
-            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(terminal + " -t floating_terminal -e calcurse")},
+            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(terminal + " -t floating_terminal -e /home/loico/bin/pop-up.sh calcurse")},
         ),
         widget.Clock(
             font="Iosevka Nerd Font",
@@ -435,7 +435,7 @@ def top_bar():
             background=colors[15],
             fontsize=15,
             format="%d %b, %A",
-            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(terminal + " -t floating_terminal -e calcurse")},
+            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(terminal + " -t floating_terminal -e /home/loico/bin/pop-up.sh calcurse")},
         ),
         widget.Sep(
             padding=6,
@@ -464,6 +464,7 @@ def top_bar():
             background=colors[16],
             fontsize=15,
             format="%H:%M",
+            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(terminal + " -t floating_terminal -e /home/loico/bin/pop-up.sh tty-clock -sc")},
         ),
         widget.TextBox(
             text=powerline_symbol,
