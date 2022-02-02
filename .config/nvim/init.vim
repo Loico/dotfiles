@@ -38,6 +38,7 @@ call plug#begin('~/.config/nvim/plugged')
 " define your plugins
 Plug 'sainnhe/everforest'
 Plug 'neovim/nvim-lspconfig'
+Plug 'windwp/nvim-autopairs'
 
 call plug#end()
 
