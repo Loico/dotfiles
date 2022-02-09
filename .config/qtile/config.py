@@ -161,7 +161,7 @@ for i in groups:
     ])
 
 layouts = [
-    layout.Columns(border_focus='#324c80', border_focus_stack='#92b19e', boder_normal='#191919', border_normal_stack='#191919', margin = 5, single_border_width = 0),
+    layout.Columns(border_focus=colors[2], border_focus_stack='#92b19e', boder_normal='#191919', border_normal_stack='#191919', margin = 5, single_border_width = 0),
     layout.Max(),
     # Plasma(margin = 5),
     # Try more layouts by unleashing below layouts.
