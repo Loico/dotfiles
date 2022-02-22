@@ -141,3 +141,6 @@ alias matlab='~/MATLAB/R2020b/bin/matlab'
 
 # Alias for STM32 CUBE IDE
 alias stm32cubeide='/opt/st/stm32cubeide_1.6.0/stm32cubeide'
+
+# rust
+. "$HOME/.cargo/env"
