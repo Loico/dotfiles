@@ -39,6 +39,13 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'sainnhe/everforest'
 Plug 'neovim/nvim-lspconfig'
 Plug 'windwp/nvim-autopairs'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdLine'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
 
 call plug#end()
 
