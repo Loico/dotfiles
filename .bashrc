@@ -121,6 +121,9 @@ fi
 # Prompt
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '
 
+set -o vi
+export EDITOR=v
+
 alias please='sudo "$BASH" -c "$(history -p !!)"'
 
 # golang
