@@ -12,6 +12,9 @@ set expandtab
 " enable autoindents
 set smartindent
 
+" text width
+set colorcolumn=80
+
 " adds line numbers
 set number
 set relativenumber
